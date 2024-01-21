@@ -25,6 +25,7 @@ jobs:
           TARGET: "/var/www/html/"
           EXCLUDE: .rsyncignore
           SCRIPT_AFTER: |
+            cd /var/www/html/
             composer install --optimize-autoloader --no-dev
             cp .env.example .env
             php artisan key:generate
