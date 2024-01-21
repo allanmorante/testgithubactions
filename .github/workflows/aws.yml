@@ -24,3 +24,7 @@ jobs:
           REMOTE_USER: ${{ secrets.USERNAME }}
           TARGET: "/var/www/html/"
           EXCLUDE: .rsyncignore
+          SCRIPT_AFTER: |
+            composer install --optimize-autoloader --no-dev
+            cp .env.example .env
+            php artisan key:generate
