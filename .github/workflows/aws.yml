@@ -23,7 +23,7 @@ jobs:
           REMOTE_HOST: ${{ secrets.HOST_DNS }}
           REMOTE_USER: ${{ secrets.USERNAME }}
           TARGET: "/var/www/html/"
-          EXCLUDE: .rsyncignore
+          EXCLUDE: 'vendor/'
           SCRIPT_AFTER: |
             cd /var/www/html/
             composer install --optimize-autoloader --no-dev
