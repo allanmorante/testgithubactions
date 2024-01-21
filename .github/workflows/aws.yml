@@ -29,8 +29,3 @@ jobs:
             composer install --optimize-autoloader --no-dev
             cp .env.example .env
             php artisan key:generate
-
-      - name: Run migrations
-        run: php artisan migrate
-        env:
-          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
