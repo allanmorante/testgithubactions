@@ -29,3 +29,4 @@ jobs:
             composer install --optimize-autoloader --no-dev
             cp .env.example .env
             php artisan key:generate
+            php artisan migrate
