@@ -4,11 +4,11 @@ name: Push-to-EC2
 on:
   push:
     branches:
-      - main
+      - stage
 
 jobs:
   deploy:
-    name: Deploy to EC2 on master branch push
+    name: Deploy to EC2 on stage branch push
     runs-on: ubuntu-latest
 
     steps:
